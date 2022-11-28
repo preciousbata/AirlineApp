@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ibomair/routes.dart';
-import 'package:ibomair/src/presentation/screens/loginscreen.dart';
+import 'package:ibomair/src/presentation/screens/splashscreen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
           fontFamily: 'Raleway',
         ),
         debugShowCheckedModeBanner: false,
-        initialRoute: LoginScreen.routeName,
+        initialRoute: SplashScreen.routeName,
         routes: routes);
   }
 }

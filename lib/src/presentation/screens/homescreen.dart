@@ -52,7 +52,7 @@ class HomeScreen extends StatelessWidget {
                     const Padding(
                       padding: EdgeInsets.only(left: 20.0),
                       child: Text(
-                        'My flights',
+                        'My Flights',
                         style: TextStyle(
                             fontWeight: FontWeight.bold,
                             fontSize: 24,
@@ -77,34 +77,26 @@ class HomeScreen extends StatelessWidget {
                 ),
               ),
             ),
-            Positioned(
-              left: 290,
-              right: 20,
-              top: height / 0.377,
-              bottom: 20,
-              child: GestureDetector(
-                onTap: () => Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) =>
-                        const BookingScreen(),
-                  ),
-                ),
-                child: DecoratedBox(
-                  decoration: BoxDecoration(
-                    color: Colors.green,
-                    borderRadius: BorderRadius.circular(15),
-                  ),
-                  child: const Icon(
-                    Icons.add,
-                    color: Colors.white,
-                    size: 40,
-                  ),
-                ),
-              ),
-            )
           ],
         ),
+        floatingActionButton: FloatingActionButton.extended(
+          backgroundColor: Colors.white,
+          onPressed: () => Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => const BookingScreen(),
+            ),
+          ),
+          label: const Text(
+            'Book Flight',
+            style: TextStyle(
+                fontSize: 15,
+                fontWeight: FontWeight.w600,
+                color: Colors.deepOrange),
+          ),
+        ),
+        floatingActionButtonLocation:
+            FloatingActionButtonLocation.miniEndFloat,
       ),
     );
   }

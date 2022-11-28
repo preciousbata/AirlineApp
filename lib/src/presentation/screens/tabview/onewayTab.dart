@@ -95,6 +95,7 @@ class _OneWayTabState extends State<OneWayTab> {
               },
             ),
           ),
+
           const SizedBox(
             height: 22,
           ),
@@ -111,9 +112,6 @@ class _OneWayTabState extends State<OneWayTab> {
                   fontWeight: FontWeight.bold),
             ),
           ),
-          const SizedBox(
-            height: 17,
-          )
         ],
       ),
     );
