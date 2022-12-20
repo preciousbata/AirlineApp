@@ -27,7 +27,7 @@ class TicketView extends StatelessWidget {
                       'QUO',
                       style: TextStyle(
                           fontSize: 18,
-                          color: Colors.deepOrange,
+                          color: Colors.green,
                           fontWeight: FontWeight.w600),
                     ),
                     const Spacer(),
@@ -95,7 +95,7 @@ class TicketView extends StatelessWidget {
                     const Text('ABJ',
                         style: TextStyle(
                             fontSize: 18,
-                            color: Colors.deepOrange,
+                            color: Colors.green,
                             fontWeight: FontWeight.w600)),
                   ],
                 ),
@@ -112,7 +112,7 @@ class TicketView extends StatelessWidget {
                         'UYO',
                         style: TextStyle(
                           fontSize: 16,
-                          color: Colors.deepOrange,
+                          color: Colors.green,
                           fontWeight: FontWeight.w600,
                         ),
                       ),
@@ -133,7 +133,7 @@ class TicketView extends StatelessWidget {
                         textAlign: TextAlign.end,
                         style: TextStyle(
                           fontSize: 16,
-                          color: Colors.deepOrange,
+                          color: Colors.green,
                           fontWeight: FontWeight.w600,
                         ),
                       ),
@@ -143,6 +143,8 @@ class TicketView extends StatelessWidget {
               ],
             ),
           ),
+
+
           // show bottom part of the ticket
           Container(
             decoration: const BoxDecoration(
@@ -227,18 +229,18 @@ class TicketView extends StatelessWidget {
                             CrossAxisAlignment.start,
                         children: const [
                           Text(
-                            '1 MAY',
+                            '1/05/2023',
                             style: TextStyle(
-                                color: Colors.deepOrange,
-                                fontSize: 18,
+                                color: Colors.green,
+                                fontSize: 15,
                                 fontWeight:
                                     FontWeight.w600),
                           ),
                           Text(
-                            'Date',
+                            'Departure Date',
                             style: TextStyle(
-                                color: Colors.deepOrange,
-                                fontSize: 18,
+                                color: Colors.green,
+                                fontSize: 15,
                                 fontWeight:
                                     FontWeight.w600),
                           ),
@@ -252,7 +254,7 @@ class TicketView extends StatelessWidget {
                             '08:00 AM',
                             style: TextStyle(
                                 color: Colors.deepOrange,
-                                fontSize: 18,
+                                fontSize: 15,
                                 fontWeight:
                                     FontWeight.w600),
                           ),
@@ -260,7 +262,7 @@ class TicketView extends StatelessWidget {
                             'Departure Time',
                             style: TextStyle(
                                 color: Colors.deepOrange,
-                                fontSize: 18,
+                                fontSize: 15,
                                 fontWeight:
                                     FontWeight.w600),
                           ),
@@ -271,18 +273,18 @@ class TicketView extends StatelessWidget {
                             CrossAxisAlignment.end,
                         children: const [
                           Text(
-                            '23',
+                            '23/12/2023',
                             style: TextStyle(
-                                color: Colors.deepOrange,
-                                fontSize: 18,
+                                color: Colors.green,
+                                fontSize: 15,
                                 fontWeight:
                                     FontWeight.w600),
                           ),
                           Text(
-                            'Nov',
+                            'Return Date',
                             style: TextStyle(
-                                color: Colors.deepOrange,
-                                fontSize: 18,
+                                color: Colors.green,
+                                fontSize: 15,
                                 fontWeight:
                                     FontWeight.w600),
                           ),

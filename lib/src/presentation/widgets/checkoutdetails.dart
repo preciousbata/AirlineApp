@@ -27,7 +27,7 @@ class CheckOutDetails extends StatelessWidget {
                       'QUO',
                       style: TextStyle(
                           fontSize: 18,
-                          color: Colors.deepOrange,
+                          color: Colors.green,
                           fontWeight: FontWeight.w600),
                     ),
                     const Spacer(),
@@ -95,7 +95,7 @@ class CheckOutDetails extends StatelessWidget {
                     const Text('ABJ',
                         style: TextStyle(
                             fontSize: 18,
-                            color: Colors.deepOrange,
+                            color: Colors.green,
                             fontWeight: FontWeight.w600)),
                   ],
                 ),
@@ -112,7 +112,7 @@ class CheckOutDetails extends StatelessWidget {
                         'UYO',
                         style: TextStyle(
                           fontSize: 16,
-                          color: Colors.deepOrange,
+                          color: Colors.green,
                           fontWeight: FontWeight.w600,
                         ),
                       ),
@@ -133,7 +133,7 @@ class CheckOutDetails extends StatelessWidget {
                         textAlign: TextAlign.end,
                         style: TextStyle(
                           fontSize: 16,
-                          color: Colors.deepOrange,
+                          color: Colors.green,
                           fontWeight: FontWeight.w600,
                         ),
                       ),
@@ -151,7 +151,7 @@ class CheckOutDetails extends StatelessWidget {
                         '1/05/2023',
                         style: TextStyle(
                           fontSize: 16,
-                          color: Colors.deepOrange,
+                          color: Colors.green,
                           fontWeight: FontWeight.w600,
                         ),
                       ),
@@ -172,7 +172,7 @@ class CheckOutDetails extends StatelessWidget {
                         textAlign: TextAlign.end,
                         style: TextStyle(
                           fontSize: 16,
-                          color: Colors.deepOrange,
+                          color: Colors.green,
                           fontWeight: FontWeight.w600,
                         ),
                       ),
@@ -190,7 +190,7 @@ class CheckOutDetails extends StatelessWidget {
                         'Departure Date',
                         style: TextStyle(
                           fontSize: 16,
-                          color: Colors.deepOrange,
+                          color: Colors.green,
                           fontWeight: FontWeight.w600,
                         ),
                       ),
@@ -211,7 +211,7 @@ class CheckOutDetails extends StatelessWidget {
                         textAlign: TextAlign.end,
                         style: TextStyle(
                           fontSize: 16,
-                          color: Colors.deepOrange,
+                          color: Colors.green,
                           fontWeight: FontWeight.w600,
                         ),
                       ),
@@ -229,7 +229,7 @@ class CheckOutDetails extends StatelessWidget {
                         'Precious',
                         style: TextStyle(
                           fontSize: 16,
-                          color: Colors.deepOrange,
+                          color: Colors.green,
                           fontWeight: FontWeight.w600,
                         ),
                       ),
@@ -241,7 +241,7 @@ class CheckOutDetails extends StatelessWidget {
                         textAlign: TextAlign.end,
                         style: TextStyle(
                           fontSize: 16,
-                          color: Colors.deepOrange,
+                          color: Colors.green,
                           fontWeight: FontWeight.w600,
                         ),
                       ),
@@ -259,7 +259,7 @@ class CheckOutDetails extends StatelessWidget {
                         'Passenger',
                         style: TextStyle(
                           fontSize: 16,
-                          color: Colors.deepOrange,
+                          color: Colors.green,
                           fontWeight: FontWeight.w600,
                         ),
                       ),
@@ -271,7 +271,7 @@ class CheckOutDetails extends StatelessWidget {
                         textAlign: TextAlign.end,
                         style: TextStyle(
                           fontSize: 16,
-                          color: Colors.deepOrange,
+                          color: Colors.green,
                           fontWeight: FontWeight.w600,
                         ),
                       ),
@@ -289,7 +289,7 @@ class CheckOutDetails extends StatelessWidget {
                         'FQ 232',
                         style: TextStyle(
                           fontSize: 16,
-                          color: Colors.deepOrange,
+                          color: Colors.green,
                           fontWeight: FontWeight.w600,
                         ),
                       ),
@@ -299,7 +299,7 @@ class CheckOutDetails extends StatelessWidget {
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         fontSize: 16,
-                        color: Colors.deepOrange,
+                        color: Colors.green,
                         fontWeight: FontWeight.w600,
                       ),
                     ),
@@ -310,7 +310,7 @@ class CheckOutDetails extends StatelessWidget {
                         textAlign: TextAlign.end,
                         style: TextStyle(
                           fontSize: 16,
-                          color: Colors.deepOrange,
+                          color: Colors.green,
                           fontWeight: FontWeight.w600,
                         ),
                       ),
@@ -328,7 +328,7 @@ class CheckOutDetails extends StatelessWidget {
                         'Flight No',
                         style: TextStyle(
                           fontSize: 16,
-                          color: Colors.deepOrange,
+                          color: Colors.green,
                           fontWeight: FontWeight.w600,
                         ),
                       ),
@@ -338,7 +338,7 @@ class CheckOutDetails extends StatelessWidget {
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         fontSize: 16,
-                        color: Colors.deepOrange,
+                        color: Colors.green,
                         fontWeight: FontWeight.w600,
                       ),
                     ),
@@ -349,7 +349,7 @@ class CheckOutDetails extends StatelessWidget {
                         textAlign: TextAlign.end,
                         style: TextStyle(
                           fontSize: 16,
-                          color: Colors.deepOrange,
+                          color: Colors.green,
                           fontWeight: FontWeight.w600,
                         ),
                       ),
@@ -372,7 +372,7 @@ class CheckOutDetails extends StatelessWidget {
                 'Book',
                 style: TextStyle(
                     fontSize: 20,
-                    color: Colors.deepOrange,
+                    color: Colors.green,
                     fontWeight: FontWeight.bold),
               )),
           const SizedBox(
@@ -388,7 +388,7 @@ class CheckOutDetails extends StatelessWidget {
                 'Pay Now',
                 style: TextStyle(
                     fontSize: 20,
-                    color: Colors.deepOrange,
+                    color: Colors.green,
                     fontWeight: FontWeight.bold),
               )),
         ],
