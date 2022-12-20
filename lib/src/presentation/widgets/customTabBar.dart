@@ -4,7 +4,6 @@ import '../../../constant.dart';
 import '../screens/tabview/checkoutTab.dart';
 import '../screens/tabview/flightTab.dart';
 import '../screens/tabview/routetab.dart';
-import '../screens/tabview/seatTab.dart';
 
 class CustomTabBar extends StatefulWidget {
   const CustomTabBar({Key? key}) : super(key: key);
@@ -60,7 +59,6 @@ class _CustomTabBarState extends State<CustomTabBar>
             children: const [
               RouteTab(),
               FlightTab(),
-              SeatTab(),
               CheckoutTab(),
             ],
           ),

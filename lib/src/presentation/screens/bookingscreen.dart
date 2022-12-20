@@ -12,12 +12,7 @@ class BookingScreen extends StatefulWidget {
 }
 
 class _BookingScreenState extends State<BookingScreen> {
-  List<String> mainTabBar = [
-    'Route',
-    'Flight',
-    'Seat',
-    'CheckOut'
-  ];
+  List<String> mainTabBar = ['Route', 'Flight', 'CheckOut'];
   int selectedIndex = 0;
   List<String> routeOptions = ['One Way', 'Roundtrip'];
   int selectedIndex1 = 0;
@@ -84,20 +79,10 @@ class _BookingScreenState extends State<BookingScreen> {
               top: height / 1.62,
               bottom: 0,
               child: const Body(
-                widget: CustomTabBar(),
+                widget: SingleChildScrollView(
+                    child: CustomTabBar()),
               ),
             ),
-            //HomePage(),
-            // Text('dfdf',style: TextStyle(fontSize: 30),),
-            // Positioned(
-            //   left: 290,
-            //   right: 20,
-            //   top: height / 0.377,
-            //   bottom: 20,
-            //   child: const CustomButton(
-            //     icon: Icons.arrow_forward_ios_rounded,
-            //   ),
-            // )
           ],
         ),
       ),

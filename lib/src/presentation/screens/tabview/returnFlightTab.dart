@@ -1,15 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
-class ReturnFlightTab extends StatefulWidget {
-  const ReturnFlightTab({Key? key}) : super(key: key);
+import '../../widgets/passenger_counter.dart';
+
+class RoundTripFlightTab extends StatefulWidget {
+  const RoundTripFlightTab({Key? key}) : super(key: key);
 
   @override
-  State<ReturnFlightTab> createState() =>
-      _ReturnFlightTabState();
+  State<RoundTripFlightTab> createState() =>
+      _RoundTripFlightTabState();
 }
 
-class _ReturnFlightTabState extends State<ReturnFlightTab> {
+class _RoundTripFlightTabState
+    extends State<RoundTripFlightTab> {
   TextEditingController dateInput = TextEditingController();
   DateTimeRange dateTimeRange = DateTimeRange(
       start: DateTime.now(), end: DateTime.now());
@@ -29,7 +32,7 @@ class _ReturnFlightTabState extends State<ReturnFlightTab> {
         children: [
           Padding(
             padding:
-                const EdgeInsets.fromLTRB(8, 45, 8, 20),
+                const EdgeInsets.fromLTRB(8, 30, 8, 20),
             child: TextField(
               decoration: InputDecoration(
                   border: OutlineInputBorder(
@@ -102,6 +105,56 @@ class _ReturnFlightTabState extends State<ReturnFlightTab> {
                   });
                 }
               },
+            ),
+          ),
+          Padding(
+            padding:
+                const EdgeInsets.fromLTRB(8.0, 8, 8, 20),
+            child: TextField(
+              decoration: InputDecoration(
+                border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(10),
+                    borderSide: const BorderSide(
+                        color: Colors.deepOrange)),
+                hintText: 'FLIGHT CLASS',
+                prefixIcon: const Icon(
+                  Icons.flight_class_rounded,
+                  color: Colors.deepOrange,
+                ),
+                hintStyle: const TextStyle(
+                    fontWeight: FontWeight.w300,
+                    color: Colors.deepOrange),
+              ),
+            ),
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: const [
+              Padding(
+                padding: EdgeInsets.only(left: 18.0),
+                child: Text(
+                  'PASSENGER',
+                  style: TextStyle(
+                    fontSize: 20,
+                    color: Colors.deepOrange,
+                  ),
+                ),
+              ),
+            ],
+          ),
+          Padding(
+            padding: const EdgeInsets.all(6.0),
+            child: Row(
+              mainAxisAlignment:
+                  MainAxisAlignment.spaceBetween,
+              children: const [
+                PassengerCounter(
+                  options: 'CHILD',
+                ),
+                PassengerCounter(
+                  options: 'ADULT',
+                )
+              ],
             ),
           ),
           const SizedBox(

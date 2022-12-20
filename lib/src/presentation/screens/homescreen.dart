@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ibomair/src/presentation/widgets/ticket_view.dart';
 
 import 'bookingscreen.dart';
 
@@ -75,6 +76,12 @@ class HomeScreen extends StatelessWidget {
                       topRight: Radius.circular(30)),
                   color: Colors.deepOrange,
                 ),
+                child: SingleChildScrollView(
+                    scrollDirection: Axis.vertical,
+                    child: Column(
+                      children: List.generate(
+                          4, (index) => const TicketView()),
+                    )),
               ),
             ),
           ],
@@ -92,7 +99,7 @@ class HomeScreen extends StatelessWidget {
             style: TextStyle(
                 fontSize: 15,
                 fontWeight: FontWeight.w600,
-                color: Colors.deepOrange),
+                color: Colors.green),
           ),
         ),
         floatingActionButtonLocation:

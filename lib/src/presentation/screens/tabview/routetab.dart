@@ -18,49 +18,48 @@ class _RouteTabState extends State<RouteTab>
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
-      child: Expanded(
-        child: Column(
-          children: [
-            Align(
-              alignment: Alignment.centerLeft,
-              child: TabBar(
-                labelPadding: const EdgeInsets.only(
-                    left: 70, right: 70),
-                controller: _tabController,
-                labelColor: greenColor,
-                labelStyle: const TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 16),
-                unselectedLabelColor: lightTextColor,
-                indicatorColor: greenColor,
-                unselectedLabelStyle: const TextStyle(
-                  fontWeight: FontWeight.normal,
+      physics: const NeverScrollableScrollPhysics(),
+      child: Column(
+        children: [
+          Align(
+            alignment: Alignment.centerLeft,
+            child: TabBar(
+              labelPadding: const EdgeInsets.only(
+                  left: 70, right: 70),
+              controller: _tabController,
+              labelColor: greenColor,
+              labelStyle: const TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 16),
+              unselectedLabelColor: lightTextColor,
+              indicatorColor: greenColor,
+              unselectedLabelStyle: const TextStyle(
+                fontWeight: FontWeight.normal,
+              ),
+              isScrollable: true,
+              indicatorSize: TabBarIndicatorSize.label,
+              tabs: const [
+                Tab(
+                  text: 'One Way',
                 ),
-                isScrollable: true,
-                indicatorSize: TabBarIndicatorSize.label,
-                tabs: const [
-                  Tab(
-                    text: 'One Way',
-                  ),
-                  Tab(
-                    text: 'Return',
-                  ),
-                ],
-              ),
+                Tab(
+                  text: 'Round Trip',
+                ),
+              ],
             ),
-            SizedBox(
-              height: 700,
-              width: double.maxFinite,
-              child: TabBarView(
-                controller: _tabController,
-                children: const [
-                  OneWayTab(),
-                  ReturnFlightTab(),
-                ],
-              ),
+          ),
+          SizedBox(
+            height: 700,
+            width: double.maxFinite,
+            child: TabBarView(
+              controller: _tabController,
+              children: const [
+                OneWayTab(),
+                RoundTripFlightTab(),
+              ],
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }
