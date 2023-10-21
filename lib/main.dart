@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
         title: 'Ibom Air',
         theme: ThemeData(
           // This is the theme of your application.
-          primarySwatch: Colors.blue,
+          useMaterial3: true,
           fontFamily: 'Raleway',
         ),
         debugShowCheckedModeBanner: false,

@@ -3,19 +3,22 @@ import 'package:intl/intl.dart';
 
 import '../../widgets/passenger_counter.dart';
 
-class OneWayTab extends StatefulWidget {
-  const OneWayTab({Key? key}) : super(key: key);
+class RoundTripFlightTab extends StatefulWidget {
+  const RoundTripFlightTab({Key? key}) : super(key: key);
 
   @override
-  State<OneWayTab> createState() => _OneWayTabState();
+  State<RoundTripFlightTab> createState() => _RoundTripFlightTabState();
 }
 
-class _OneWayTabState extends State<OneWayTab> {
+class _RoundTripFlightTabState extends State<RoundTripFlightTab> {
   TextEditingController dateInput = TextEditingController();
+  DateTimeRange dateTimeRange =
+      DateTimeRange(start: DateTime.now(), end: DateTime.now());
 
   @override
   void initState() {
-    dateInput.text = '';
+    dateInput.text =
+        '${DateFormat('yyyy-MM-dd').format(dateTimeRange.start)} - ${DateFormat('yyyy-MM-dd').format(dateTimeRange.end)}';
     super.initState();
   }
 
@@ -23,17 +26,21 @@ class _OneWayTabState extends State<OneWayTab> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        color: Colors.white,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(30),
+          image: const DecorationImage(
+              image: AssetImage('assets/images/bg3.jpeg'),
+              fit: BoxFit.cover,
+              opacity: 0.4),
+        ),
         child: Column(
           children: [
             Padding(
-              padding:
-                  const EdgeInsets.fromLTRB(8, 30, 8, 12),
+              padding: const EdgeInsets.fromLTRB(8, 30, 8, 20),
               child: TextField(
                 decoration: InputDecoration(
                     border: OutlineInputBorder(
-                      borderRadius:
-                          BorderRadius.circular(10),
+                      borderRadius: BorderRadius.circular(10),
                     ),
                     hintText: 'DEPARTURE',
                     prefixIcon: const Icon(
@@ -41,26 +48,23 @@ class _OneWayTabState extends State<OneWayTab> {
                       color: Colors.deepOrange,
                     ),
                     hintStyle: const TextStyle(
-                        fontWeight: FontWeight.w300,
-                        color: Colors.deepOrange)),
+                        fontWeight: FontWeight.w300, color: Colors.deepOrange)),
               ),
             ),
             Padding(
-              padding:
-                  const EdgeInsets.fromLTRB(8.0, 8, 8, 12),
+              padding: const EdgeInsets.fromLTRB(8.0, 8, 8, 20),
               child: TextField(
                 decoration: InputDecoration(
                   border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(10),
-                  ),
+                      borderRadius: BorderRadius.circular(10),
+                      borderSide: const BorderSide(color: Colors.deepOrange)),
                   hintText: 'ARRIVAL',
                   prefixIcon: const Icon(
                     Icons.flight_land_rounded,
                     color: Colors.deepOrange,
                   ),
                   hintStyle: const TextStyle(
-                      fontWeight: FontWeight.w300,
-                      color: Colors.deepOrange),
+                      fontWeight: FontWeight.w300, color: Colors.deepOrange),
                 ),
               ),
             ),
@@ -75,50 +79,48 @@ class _OneWayTabState extends State<OneWayTab> {
                   ),
                   hintText: 'PICK A DATE',
                   hintStyle: const TextStyle(
-                      fontWeight: FontWeight.w300,
-                      color: Colors.deepOrange),
+                      fontWeight: FontWeight.w300, color: Colors.deepOrange),
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(10),
                   ),
                 ),
                 readOnly: true,
                 onTap: () async {
-                  final pickedDate = await showDatePicker(
+                  final pickedDate = await showDateRangePicker(
                       context: context,
-                      initialDate: DateTime.now(),
                       firstDate: DateTime(2022),
                       lastDate: DateTime(2023));
                   if (pickedDate != null) {
-                    String formattedDate =
-                        DateFormat('yyyy-MM-dd')
-                            .format(pickedDate);
+                    String initialDate =
+                        DateFormat('yyyy-MM-dd').format(pickedDate.start);
+                    String finalDate =
+                        DateFormat('yyyy-MM-dd').format(pickedDate.end);
                     setState(() {
-                      dateInput.text = formattedDate;
+                      dateInput.text = '$initialDate - $finalDate';
                     });
                   }
                 },
               ),
             ),
             Padding(
-              padding:
-                  const EdgeInsets.fromLTRB(8.0, 8, 8, 12),
+              padding: const EdgeInsets.fromLTRB(8.0, 8, 8, 20),
               child: TextField(
                 decoration: InputDecoration(
                   border: OutlineInputBorder(
-                      borderRadius:
-                          BorderRadius.circular(10),
-                      borderSide: const BorderSide(
-                          color: Colors.deepOrange)),
+                      borderRadius: BorderRadius.circular(10),
+                      borderSide: const BorderSide(color: Colors.deepOrange)),
                   hintText: 'FLIGHT CLASS',
                   prefixIcon: const Icon(
                     Icons.flight_class_rounded,
                     color: Colors.deepOrange,
                   ),
                   hintStyle: const TextStyle(
-                      fontWeight: FontWeight.w300,
-                      color: Colors.deepOrange),
+                      fontWeight: FontWeight.w300, color: Colors.deepOrange),
                 ),
               ),
+            ),
+            const SizedBox(
+              height: 10,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.start,
@@ -138,8 +140,7 @@ class _OneWayTabState extends State<OneWayTab> {
             Padding(
               padding: const EdgeInsets.all(6.0),
               child: Row(
-                mainAxisAlignment:
-                    MainAxisAlignment.spaceBetween,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: const [
                   PassengerCounter(
                     options: 'CHILD',
@@ -150,26 +151,33 @@ class _OneWayTabState extends State<OneWayTab> {
                 ],
               ),
             ),
-            const SizedBox(
-              height: 22,
-            ),
-            ElevatedButton(
-              onPressed: null,
-              style: ButtonStyle(
-                  backgroundColor:
-                      MaterialStateProperty.all(
-                          Colors.deepOrange)),
-              child: const Text(
-                'Check Flight',
-                style: TextStyle(
-                    fontSize: 20,
-                    color: Colors.white,
-                    fontWeight: FontWeight.bold),
+          ],
+        ),
+      ),
+      floatingActionButton: Padding(
+        padding: const EdgeInsets.only(bottom: 89.0),
+        child: Row(
+          children: const [
+            Expanded(
+              child: Padding(
+                padding: EdgeInsets.symmetric(horizontal: 20.0),
+                child: FloatingActionButton.extended(
+                  onPressed: null,
+                  backgroundColor: Colors.deepOrange,
+                  label: Text(
+                    'Check Flight',
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold),
+                  ),
+                ),
               ),
             ),
           ],
         ),
       ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
     );
   }
 }

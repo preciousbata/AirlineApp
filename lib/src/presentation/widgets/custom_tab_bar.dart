@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 import '../../../constant.dart';
-import '../screens/tabview/checkoutTab.dart';
-import '../screens/tabview/flightTab.dart';
+import '../screens/tabview/checkout_tab.dart';
+import '../screens/tabview/flight_tab.dart';
 import '../screens/tabview/routetab.dart';
 
 class CustomTabBar extends StatefulWidget {
@@ -14,8 +14,7 @@ class CustomTabBar extends StatefulWidget {
 
 class _CustomTabBarState extends State<CustomTabBar>
     with TickerProviderStateMixin {
-  late final _tabController =
-      TabController(length: 3, vsync: this);
+  late final _tabController = TabController(length: 3, vsync: this);
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -23,8 +22,7 @@ class _CustomTabBarState extends State<CustomTabBar>
         Align(
           alignment: Alignment.centerLeft,
           child: TabBar(
-            labelPadding:
-                const EdgeInsets.only(left: 34, right: 45),
+            labelPadding: const EdgeInsets.only(left: 34, right: 45),
             controller: _tabController,
             labelColor: greenColor,
             labelStyle: const TextStyle(
@@ -52,7 +50,7 @@ class _CustomTabBarState extends State<CustomTabBar>
           ),
         ),
         SizedBox(
-          height: 572,
+          height: 699,
           width: double.maxFinite,
           child: TabBarView(
             controller: _tabController,

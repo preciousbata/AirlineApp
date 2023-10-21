@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:ibomair/src/presentation/screens/tabview/returnFlightTab.dart';
+import 'package:ibomair/src/presentation/screens/tabview/return_flight_tab.dart';
 
 import '../../../../constant.dart';
-import 'onewayTab.dart';
+import 'oneway_tab.dart';
 
 class RouteTab extends StatefulWidget {
   const RouteTab({Key? key}) : super(key: key);
@@ -11,10 +11,8 @@ class RouteTab extends StatefulWidget {
   _RouteTabState createState() => _RouteTabState();
 }
 
-class _RouteTabState extends State<RouteTab>
-    with TickerProviderStateMixin {
-  late final _tabController =
-      TabController(length: 2, vsync: this);
+class _RouteTabState extends State<RouteTab> with TickerProviderStateMixin {
+  late final _tabController = TabController(length: 2, vsync: this);
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
@@ -24,13 +22,11 @@ class _RouteTabState extends State<RouteTab>
           Align(
             alignment: Alignment.centerLeft,
             child: TabBar(
-              labelPadding: const EdgeInsets.only(
-                  left: 70, right: 70),
+              labelPadding: const EdgeInsets.only(left: 70, right: 70),
               controller: _tabController,
               labelColor: greenColor,
-              labelStyle: const TextStyle(
-                  fontWeight: FontWeight.bold,
-                  fontSize: 16),
+              labelStyle:
+                  const TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
               unselectedLabelColor: lightTextColor,
               indicatorColor: greenColor,
               unselectedLabelStyle: const TextStyle(

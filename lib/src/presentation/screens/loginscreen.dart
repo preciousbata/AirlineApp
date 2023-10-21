@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:ibomair/constant.dart';
 import 'package:ibomair/src/presentation/widgets/background.dart';
-import 'homescreen.dart';
+import 'package:ibomair/src/presentation/widgets/navbar/main_nav_bar.dart';
 
 class LoginScreen extends StatelessWidget {
   static String routeName = '/login';
@@ -14,15 +15,15 @@ class LoginScreen extends StatelessWidget {
         Scaffold(
           backgroundColor: Colors.transparent,
           body: Container(
-            padding:
-                const EdgeInsets.symmetric(horizontal: 20),
+            padding: const EdgeInsets.symmetric(horizontal: 20),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                buildTextField('E-MAIL',
-                    Icons.alternate_email_rounded),
-                buildTextField(
-                    'PASSWORD', Icons.lock_rounded),
+                buildTextField('E-MAIL', Icons.alternate_email_rounded),
+                const SizedBox(
+                  height: 10,
+                ),
+                buildTextField('PASSWORD', Icons.lock_rounded),
                 const Padding(
                   padding: EdgeInsets.all(18.0),
                   child: Text(
@@ -35,25 +36,22 @@ class LoginScreen extends StatelessWidget {
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(
-                      bottom: 20.0, top: 20),
+                  padding: const EdgeInsets.only(bottom: 20.0, top: 20),
                   child: GestureDetector(
                     onTap: () => Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) =>
-                                const HomeScreen())),
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const MainNavBar()),
+                    ),
                     child: Container(
                       height: 60,
                       width: 290,
                       decoration: BoxDecoration(
-                        borderRadius:
-                            BorderRadius.circular(20),
+                        borderRadius: BorderRadius.circular(20),
                         color: Colors.green,
                       ),
                       child: const Padding(
-                        padding: EdgeInsets.symmetric(
-                            vertical: 18.0),
+                        padding: EdgeInsets.symmetric(vertical: 18.0),
                         child: Text(
                           'Log In',
                           style: TextStyle(
@@ -67,8 +65,7 @@ class LoginScreen extends StatelessWidget {
                   ),
                 ),
                 Row(
-                  mainAxisAlignment:
-                      MainAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: const [
                     Text(
                       'Not a member ?',
@@ -121,20 +118,21 @@ class LoginScreen extends StatelessWidget {
   }
 
   Widget buildTextField(String hintText, IconData icon) {
-    return Padding(
-      padding: const EdgeInsets.all(10.0),
-      child: TextField(
-        decoration: InputDecoration(
-          hintText: hintText,
-          prefixIcon: Icon(
-            icon,
-            color: Colors.deepOrange,
-          ),
-          //prefixIconColor: Colors.deepOrange,
-          hintStyle: const TextStyle(
-              fontWeight: FontWeight.w300,
-              color: Colors.white),
+    return TextField(
+      decoration: InputDecoration(
+        hintText: hintText,
+        border: OutlineInputBorder(borderRadius: BorderRadius.circular(7)),
+        prefixIcon: Icon(
+          icon,
+          color: Colors.deepOrange,
         ),
+        focusedBorder:
+            OutlineInputBorder(borderRadius: BorderRadius.circular(7)),
+        fillColor: Colors.grey.shade200,
+        filled: true,
+        //prefixIconColor: Colors.deepOrange,
+        hintStyle:
+            const TextStyle(fontWeight: FontWeight.w300, color: greenColor),
       ),
     );
   }

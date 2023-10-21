@@ -6,36 +6,35 @@ class CheckOutDetails extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.only(
-          left: 16, right: 16, top: 16),
-      child: Column(
-        children: [
-          Container(
-            padding: const EdgeInsets.all(16),
-            decoration: const BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.only(
-                    topLeft: Radius.circular(21),
-                    topRight: Radius.circular(21))),
-            child: Column(
+      margin: const EdgeInsets.symmetric(horizontal: 10),
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(30),
+        image: const DecorationImage(
+            image: AssetImage('assets/images/bg3.jpeg'),
+            fit: BoxFit.cover,
+            opacity: 0.4),
+      ),
+      child: Padding(
+        padding: const EdgeInsets.all(12.0),
+        child: Column(
+          children: [
+            Column(
               children: [
                 Row(
-                  mainAxisAlignment:
-                      MainAxisAlignment.spaceBetween,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     const Text(
                       'QUO',
                       style: TextStyle(
                           fontSize: 18,
-                          color: Colors.green,
+                          color: Colors.deepOrange,
                           fontWeight: FontWeight.w600),
                     ),
                     const Spacer(),
                     Container(
                       padding: const EdgeInsets.all(3),
                       decoration: BoxDecoration(
-                          borderRadius:
-                              BorderRadius.circular(20),
+                          borderRadius: BorderRadius.circular(20),
                           border: Border.all(width: 2.5),
                           color: Colors.deepOrange),
                     ),
@@ -45,27 +44,20 @@ class CheckOutDetails extends StatelessWidget {
                           height: 24,
                           child: LayoutBuilder(
                             builder: (BuildContext context,
-                                BoxConstraints
-                                    constraints) {
+                                BoxConstraints constraints) {
                               return Flex(
                                 direction: Axis.horizontal,
                                 mainAxisAlignment:
-                                    MainAxisAlignment
-                                        .spaceBetween,
-                                mainAxisSize:
-                                    MainAxisSize.max,
+                                    MainAxisAlignment.spaceBetween,
+                                mainAxisSize: MainAxisSize.max,
                                 children: List.generate(
-                                  (constraints.constrainWidth() /
-                                          6)
-                                      .floor(),
+                                  (constraints.constrainWidth() / 6).floor(),
                                   (index) => const SizedBox(
                                     width: 3,
                                     height: 1,
                                     child: DecoratedBox(
-                                        decoration:
-                                            BoxDecoration(
-                                                color: Colors
-                                                    .deepOrange)),
+                                        decoration: BoxDecoration(
+                                            color: Colors.deepOrange)),
                                   ),
                                 ),
                               );
@@ -86,8 +78,7 @@ class CheckOutDetails extends StatelessWidget {
                     Container(
                       padding: const EdgeInsets.all(3),
                       decoration: BoxDecoration(
-                          borderRadius:
-                              BorderRadius.circular(20),
+                          borderRadius: BorderRadius.circular(20),
                           border: Border.all(width: 2.5),
                           color: Colors.deepOrange),
                     ),
@@ -95,7 +86,7 @@ class CheckOutDetails extends StatelessWidget {
                     const Text('ABJ',
                         style: TextStyle(
                             fontSize: 18,
-                            color: Colors.green,
+                            color: Colors.deepOrange,
                             fontWeight: FontWeight.w600)),
                   ],
                 ),
@@ -103,8 +94,7 @@ class CheckOutDetails extends StatelessWidget {
                   height: 8,
                 ),
                 Row(
-                  mainAxisAlignment:
-                      MainAxisAlignment.spaceBetween,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: const [
                     SizedBox(
                       width: 100,
@@ -112,7 +102,7 @@ class CheckOutDetails extends StatelessWidget {
                         'UYO',
                         style: TextStyle(
                           fontSize: 16,
-                          color: Colors.green,
+                          color: Colors.deepOrange,
                           fontWeight: FontWeight.w600,
                         ),
                       ),
@@ -133,7 +123,7 @@ class CheckOutDetails extends StatelessWidget {
                         textAlign: TextAlign.end,
                         style: TextStyle(
                           fontSize: 16,
-                          color: Colors.green,
+                          color: Colors.deepOrange,
                           fontWeight: FontWeight.w600,
                         ),
                       ),
@@ -142,8 +132,7 @@ class CheckOutDetails extends StatelessWidget {
                 ),
                 const SizedBox(height: 40),
                 Row(
-                  mainAxisAlignment:
-                      MainAxisAlignment.spaceBetween,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: const [
                     SizedBox(
                       width: 100,
@@ -151,7 +140,7 @@ class CheckOutDetails extends StatelessWidget {
                         '1/05/2023',
                         style: TextStyle(
                           fontSize: 16,
-                          color: Colors.green,
+                          color: Colors.deepOrange,
                           fontWeight: FontWeight.w600,
                         ),
                       ),
@@ -172,7 +161,7 @@ class CheckOutDetails extends StatelessWidget {
                         textAlign: TextAlign.end,
                         style: TextStyle(
                           fontSize: 16,
-                          color: Colors.green,
+                          color: Colors.deepOrange,
                           fontWeight: FontWeight.w600,
                         ),
                       ),
@@ -181,8 +170,7 @@ class CheckOutDetails extends StatelessWidget {
                 ),
                 const SizedBox(height: 8),
                 Row(
-                  mainAxisAlignment:
-                      MainAxisAlignment.spaceBetween,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: const [
                     SizedBox(
                       width: 100,
@@ -190,7 +178,7 @@ class CheckOutDetails extends StatelessWidget {
                         'Departure Date',
                         style: TextStyle(
                           fontSize: 16,
-                          color: Colors.green,
+                          color: Colors.deepOrange,
                           fontWeight: FontWeight.w600,
                         ),
                       ),
@@ -211,7 +199,7 @@ class CheckOutDetails extends StatelessWidget {
                         textAlign: TextAlign.end,
                         style: TextStyle(
                           fontSize: 16,
-                          color: Colors.green,
+                          color: Colors.deepOrange,
                           fontWeight: FontWeight.w600,
                         ),
                       ),
@@ -220,8 +208,7 @@ class CheckOutDetails extends StatelessWidget {
                 ),
                 const SizedBox(height: 40),
                 Row(
-                  mainAxisAlignment:
-                      MainAxisAlignment.spaceBetween,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: const [
                     SizedBox(
                       width: 100,
@@ -229,7 +216,7 @@ class CheckOutDetails extends StatelessWidget {
                         'Precious',
                         style: TextStyle(
                           fontSize: 16,
-                          color: Colors.green,
+                          color: Colors.deepOrange,
                           fontWeight: FontWeight.w600,
                         ),
                       ),
@@ -237,11 +224,11 @@ class CheckOutDetails extends StatelessWidget {
                     SizedBox(
                       width: 100,
                       child: Text(
-                        'A011111',
+                        '001',
                         textAlign: TextAlign.end,
                         style: TextStyle(
                           fontSize: 16,
-                          color: Colors.green,
+                          color: Colors.deepOrange,
                           fontWeight: FontWeight.w600,
                         ),
                       ),
@@ -250,8 +237,7 @@ class CheckOutDetails extends StatelessWidget {
                 ),
                 const SizedBox(height: 8),
                 Row(
-                  mainAxisAlignment:
-                      MainAxisAlignment.spaceBetween,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: const [
                     SizedBox(
                       width: 100,
@@ -259,7 +245,7 @@ class CheckOutDetails extends StatelessWidget {
                         'Passenger',
                         style: TextStyle(
                           fontSize: 16,
-                          color: Colors.green,
+                          color: Colors.deepOrange,
                           fontWeight: FontWeight.w600,
                         ),
                       ),
@@ -271,7 +257,7 @@ class CheckOutDetails extends StatelessWidget {
                         textAlign: TextAlign.end,
                         style: TextStyle(
                           fontSize: 16,
-                          color: Colors.green,
+                          color: Colors.deepOrange,
                           fontWeight: FontWeight.w600,
                         ),
                       ),
@@ -280,37 +266,36 @@ class CheckOutDetails extends StatelessWidget {
                 ),
                 const SizedBox(height: 40),
                 Row(
-                  mainAxisAlignment:
-                      MainAxisAlignment.spaceBetween,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: const [
                     SizedBox(
                       width: 100,
                       child: Text(
-                        'FQ 232',
+                        'Air Force 1',
                         style: TextStyle(
                           fontSize: 16,
-                          color: Colors.green,
+                          color: Colors.deepOrange,
                           fontWeight: FontWeight.w600,
                         ),
                       ),
                     ),
                     Text(
-                      'F 2',
+                      '001',
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         fontSize: 16,
-                        color: Colors.green,
+                        color: Colors.deepOrange,
                         fontWeight: FontWeight.w600,
                       ),
                     ),
                     SizedBox(
                       width: 100,
                       child: Text(
-                        'Business',
+                        'Presidential',
                         textAlign: TextAlign.end,
                         style: TextStyle(
                           fontSize: 16,
-                          color: Colors.green,
+                          color: Colors.deepOrange,
                           fontWeight: FontWeight.w600,
                         ),
                       ),
@@ -319,8 +304,7 @@ class CheckOutDetails extends StatelessWidget {
                 ),
                 const SizedBox(height: 8),
                 Row(
-                  mainAxisAlignment:
-                      MainAxisAlignment.spaceBetween,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: const [
                     SizedBox(
                       width: 100,
@@ -328,7 +312,7 @@ class CheckOutDetails extends StatelessWidget {
                         'Flight No',
                         style: TextStyle(
                           fontSize: 16,
-                          color: Colors.green,
+                          color: Colors.deepOrange,
                           fontWeight: FontWeight.w600,
                         ),
                       ),
@@ -338,7 +322,7 @@ class CheckOutDetails extends StatelessWidget {
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         fontSize: 16,
-                        color: Colors.green,
+                        color: Colors.deepOrange,
                         fontWeight: FontWeight.w600,
                       ),
                     ),
@@ -349,7 +333,7 @@ class CheckOutDetails extends StatelessWidget {
                         textAlign: TextAlign.end,
                         style: TextStyle(
                           fontSize: 16,
-                          color: Colors.green,
+                          color: Colors.deepOrange,
                           fontWeight: FontWeight.w600,
                         ),
                       ),
@@ -358,40 +342,54 @@ class CheckOutDetails extends StatelessWidget {
                 ),
               ],
             ),
-          ),
-          const SizedBox(
-            height: 8,
-          ),
-          ElevatedButton(
-              onPressed: null,
-              style: ButtonStyle(
-                  backgroundColor:
-                      MaterialStateProperty.all(
-                          Colors.white)),
-              child: const Text(
-                'Book',
-                style: TextStyle(
-                    fontSize: 20,
-                    color: Colors.green,
-                    fontWeight: FontWeight.bold),
-              )),
-          const SizedBox(
-            height: 8,
-          ),
-          ElevatedButton(
-              onPressed: null,
-              style: ButtonStyle(
-                  backgroundColor:
-                      MaterialStateProperty.all(
-                          Colors.white)),
-              child: const Text(
-                'Pay Now',
-                style: TextStyle(
-                    fontSize: 20,
-                    color: Colors.green,
-                    fontWeight: FontWeight.bold),
-              )),
-        ],
+            const SizedBox(
+              height: 85,
+            ),
+            Row(
+              children: [
+                Expanded(
+                  child: ElevatedButton(
+                      onPressed: null,
+                      style: ButtonStyle(
+                          padding: MaterialStateProperty.all(
+                              const EdgeInsets.all(10)),
+                          backgroundColor:
+                              MaterialStateProperty.all(Colors.deepOrange)),
+                      child: const Text(
+                        'Book',
+                        style: TextStyle(
+                            fontSize: 20,
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold),
+                      )),
+                ),
+              ],
+            ),
+            const SizedBox(
+              height: 20,
+            ),
+            Row(
+              children: [
+                Expanded(
+                  child: ElevatedButton(
+                      onPressed: null,
+                      style: ButtonStyle(
+                          padding: MaterialStateProperty.all(
+                              const EdgeInsets.all(10)),
+                          backgroundColor:
+                              MaterialStateProperty.all(Colors.deepOrange)),
+                      child: const Text(
+                        'Pay Now',
+                        style: TextStyle(
+                            fontSize: 20,
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold),
+                      )),
+                ),
+              ],
+            ),
+          ],
+        ),
       ),
     );
   }
