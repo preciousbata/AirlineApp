@@ -65,6 +65,8 @@ For feedback, bug reports, or general inquiries, please contact [precyb007@gmail
 Happy Flying! ✈️
 
 # Demo
-![airline demo app] <video controls src="2024.03.08_2634.mp4" title="Demo"></video>
+
+https://github.com/preciousbata/AirlineApp/assets/42701343/7fadd9b2-1dea-482e-abdf-c524e3228a3a
+
 
 
